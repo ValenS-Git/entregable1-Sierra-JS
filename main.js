@@ -1,12 +1,9 @@
-//creamos la funcion de compra de videojuegos
+//Programa que se basa en la compra de juegos y se muestra en consola los juegos obtenidos
 function compraStockDeVidejuegos(){
 
-    //se crea el inventario de los videojuegos
     let videojuegos = [];
     do {
-        //Le pedimos al usuario que juego comprar para stockearse
         let nombre = prompt("Introduzca el titulo del juego a comprar (o escriba 'salir' para finalizar)");
-        //Aca se verifica si el usuario puso un juego o finalizo la compra
         if (nombre.toLowerCase() != "salir") {
             videojuegos.push({
                 nombre
@@ -16,7 +13,6 @@ function compraStockDeVidejuegos(){
             break;
         }
     } while(true)
-    //Una vez finalizado el bucle de compra, se muestra en consola lo que compro.
     console.log("Inventario de juegos:");
     for(let i = 0; i < videojuegos.length; i++) {
         let videojuego = videojuegos[i];
